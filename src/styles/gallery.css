@@ -1,0 +1,221 @@
+:root {
+  --base-color: #3f3352;
+  --overlayH: 263;
+  --overlayS: 23%;
+  --overlayL: 26%;
+}
+
+.gallery-article {
+  --max: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 16rem;
+  will-change: transform;
+}
+
+.gallery-article.details {
+  --max: 1;
+  grid-row: span 2 !important;
+  grid-column: span 2 !important;
+  min-height: 32rem;
+}
+
+.article-description {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    0deg,
+    hsl(var(--overlayH), var(--overlayS), var(--overlayL), calc(1 * var(--max)))
+      0%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.738 * var(--max))
+      )
+      19%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.541 * var(--max))
+      )
+      34%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.382 * var(--max))
+      )
+      47%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.278 * var(--max))
+      )
+      56.5%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.194 * var(--max))
+      )
+      65%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.126 * var(--max))
+      )
+      73%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.075 * var(--max))
+      )
+      80.2%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.042 * var(--max))
+      )
+      86.1%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.021 * var(--max))
+      )
+      91%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.008 * var(--max))
+      )
+      95.2%,
+    hsla(
+        var(--overlayH),
+        var(--overlayS),
+        var(--overlayL),
+        calc(0.002 * var(--max))
+      )
+      98.2%,
+    hsla(var(--overlayH), var(--overlayS), var(--overlayL), 0) 100%
+  );
+  padding: clamp(1rem, 2.5vmin, 2.25rem);
+}
+
+.details-view {
+  color: white;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.gallery-article.details .details-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cores customizadas por artigo */
+.article-1 {
+  --overlayH: 263;
+  --overlayS: 23%;
+  --overlayL: 26%;
+}
+.article-2 {
+  --overlayH: 353;
+  --overlayS: 34%;
+  --overlayL: 58%;
+}
+.article-3 {
+  --overlayH: 200;
+  --overlayS: 50%;
+  --overlayL: 30%;
+}
+.article-4 {
+  --overlayH: 30;
+  --overlayS: 70%;
+  --overlayL: 40%;
+}
+.article-5 {
+  --overlayH: 176;
+  --overlayS: 49%;
+  --overlayL: 16%;
+}
+.article-6 {
+  --overlayH: 47;
+  --overlayS: 92%;
+  --overlayL: 32%;
+}
+.article-7 {
+  --overlayH: 280;
+  --overlayS: 60%;
+  --overlayL: 35%;
+}
+.article-8 {
+  --overlayH: 150;
+  --overlayS: 55%;
+  --overlayL: 25%;
+}
+
+.gallery-main {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.gallery-main.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Garantir que o grid container mantenha altura durante animação */
+.gallery-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Evitar que elementos absolutos durante FLIP quebrem o layout */
+.gallery-article[data-flip-id] {
+  position: relative !important;
+}
+
+/* Garantir que imagens cubram todo o container */
+.gallery-article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery-article a {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 1023px) {
+  .gallery-article.details {
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-article {
+    min-height: 8rem;
+  }
+
+  .gallery-article.details {
+    min-height: 20rem;
+  }
+}
