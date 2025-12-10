@@ -83,21 +83,21 @@ const Header = () => {
           <ul className="absolute top-16 left-0 flex w-full flex-col items-center gap-4 bg-[rgb(169,155,138)]/90  border border-white/30 shadow-lg py-4 md:hidden">
             <li className="cursor-pointer rounded-md p-1 transition-all hover:bg-white/20 hover:text-white  bg-white/5 backdrop-blur-md border border-white/30 shadow-lg">
               <Link onClick={() => AfterClicked()} to="/">
-                <span class=" font-bold bg-gradient-to-r from-blue-700 to-teal-400 bg-clip-text text-transparent">
+                <span className=" font-bold bg-gradient-to-r from-blue-700 to-teal-400 bg-clip-text text-transparent">
                   Home
                 </span>
               </Link>
             </li>
             <li className="cursor-pointer rounded-md p-1 transition-all hover:bg-white/20 hover:text-white  bg-white/5 backdrop-blur-md border border-white/30 shadow-lg">
               <Link onClick={() => AfterClicked()} to="/galeria">
-                <span class=" font-bold bg-gradient-to-r from-blue-700 to-teal-400 bg-clip-text text-transparent">
+                <span className=" font-bold bg-gradient-to-r from-blue-700 to-teal-400 bg-clip-text text-transparent">
                   Galeria de artes
                 </span>
               </Link>
             </li>
             <li className="cursor-pointer rounded-md p-1 transition-all hover:bg-white/20 hover:text-white  bg-white/5 backdrop-blur-md border border-white/30 shadow-lg">
               <Link onClick={() => AfterClicked()} to="/museus">
-                <span class=" font-bold bg-gradient-to-r from-blue-700 to-teal-400 bg-clip-text text-transparent">
+                <span className=" font-bold bg-gradient-to-r from-blue-700 to-teal-400 bg-clip-text text-transparent">
                   Museus
                 </span>
               </Link>

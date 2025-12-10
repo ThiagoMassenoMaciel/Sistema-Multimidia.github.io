@@ -219,20 +219,27 @@ const GalleryFlip = () => {
         >
           {console.log(articles)}
           {articles.exposicao_artistas.map((artista, idx) =>
-            artista.obras.map((obra, obraIdx) => (
-              <ArticleCard
-                key={`${articles.id}-${artista.id}-${obraIdx}`}
-                article={{
-                  ...obra,
-                  name_museum: articles.nome_museum,
-                  artista: artista.nome_artista,
-                }}
-                index={obraIdx}
-                isDetails={detailsId === obra.id}
-                onClick={() => handleArticleClick(obra.id)}
-                onMoveToTop={() => handleMoveToTop(obra.id)}
-              />
-            ))
+            artista.obras.map(
+              (obra, obraIdx) => (
+                console.log("\n \nobra id:", obra.id, "\n"),
+                console.log(obra),
+                (
+                  <ArticleCard
+                    key={`${articles.id}-${artista.id}-${obra.id}`}
+                    id_obra={obra.id}
+                    nome_obra={obra.nome_obra[0]}
+                    bloco_texto={obra.bloco_texto[0]}
+                    nome_museum={articles.nome_museum}
+                    nome_artista={artista.nome_artista}
+                    url_img_obra={obra.url_imagens.url_img_obra}
+                    index={obraIdx}
+                    isDetails={detailsId === obra.id}
+                    onClick={() => handleArticleClick(obra.id)}
+                    onMoveToTop={() => handleMoveToTop(obra.id)}
+                  />
+                )
+              )
+            )
           )}
         </div>
       </main>

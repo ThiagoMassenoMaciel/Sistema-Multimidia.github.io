@@ -1,6 +1,7 @@
 import React from "react";
 //import home from "../assets/home.jpg";
 import { Link } from "react-router-dom";
+import Exemplo from "../components/Exemplo.jsx";
 
 const Museus = () => {
   return (
@@ -23,7 +24,9 @@ const Museus = () => {
           </p>
         </div>
       </section>
-      <main></main>
+      <main>
+        <Exemplo />
+      </main>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import GalleryFlip from "../components/GalleryFlip";
+import Exemplo from "../components/exemplo";
 
 //import home from "../assets/home.jpg";
 
@@ -22,6 +23,7 @@ const Galeria = () => {
         className="fixed inset-0 z-10 bg-no-repeat bg-cover bg-center"
         style={{ backgroundImage: "url(home.jpg)" }}
       ></div>
+      
 
       <GalleryFlip />
     </>

@@ -176,7 +176,7 @@ const data = [
           {
             id: 5,
             nome_obra: ["El 3 de mayo de 1808", "Los fusilamientos"],
-            url_imgagens: {
+            url_imagens: {
               url_img_obra:
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_in_Google_Earth.jpg/330px-El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_in_Google_Earth.jpg",
               url_outrasFotos: [
@@ -203,7 +203,7 @@ const data = [
           {
             id: 6,
             nome_obra: ["Saturno"],
-            url_imgagens: {
+            url_imagens: {
               url_img_obra:
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg/330px-Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg",
               url_outrasFotos: [
@@ -248,8 +248,8 @@ const data = [
         obras: [
           {
             id: 7,
-            nome: ["El entierro del Conde de Orgaz"],
-            url_imgagens: {
+            nome_obra: ["El entierro del Conde de Orgaz"],
+            url_imagens: {
               url_img_obra:
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/El_entierro_del_se%C3%B1or_de_Orgaz_-_El_Greco.jpg/330px-El_entierro_del_se%C3%B1or_de_Orgaz_-_El_Greco.jpg",
               url_outrasFotos: [

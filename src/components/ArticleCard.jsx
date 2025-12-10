@@ -1,7 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Museu from "../pages/Museu";
 
-const ArticleCard = ({ article, index, isDetails, onClick, onMoveToTop }) => {
+const ArticleCard = ({
+  id_obra,
+  nome_museum,
+  nome_artista,
+  nome_obra,
+  url_img_obra,
+  bloco_texto,
+  index,
+  isDetails,
+  onClick,
+  onMoveToTop,
+}) => {
   return (
     <article
       className={`gallery-article article-${index + 1} ${
@@ -9,13 +21,20 @@ const ArticleCard = ({ article, index, isDetails, onClick, onMoveToTop }) => {
       } cursor-pointer rounded-2xl shadow-lg`}
       onClick={onClick}
     >
+      {console.log(
+        "o que veio como prop\n",
+        nome_museum,
+        "\n",
+        url_img_obra,
+        "\n"
+      )}
       <a href="#" onClick={(e) => e.preventDefault()}>
-        <img href={article.url_imagens.url_img_obra} alt={article.title} />
+        <img src={`url(${url_img_obra})`} alt={`${nome_museum}--${id_obra}`} />
       </a>
 
       <section className="article-description">
         <h2 className="text-sm md:text-base font-serif my-1 font-normal text-black/90 py-1 px-2 rounded-3xl  bg-white/20 backdrop-blur-md border border-white/30 shadow-lg w-fit">
-          {article.nome_obra}
+          {nome_obra}
         </h2>
         <div
           id="metaDADOarticle"
@@ -26,25 +45,25 @@ const ArticleCard = ({ article, index, isDetails, onClick, onMoveToTop }) => {
           }
         >
           <h2 className="text-sm md:text-base font-serif my-1 font-normal text-black/90 py-1 px-2 rounded-3xl  bg-white/20 backdrop-blur-md border border-white/30 shadow-lg w-fit">
-            {article.name_museum}
+            {nome_museum}
           </h2>
 
           <h2 className="text-sm md:text-base font-serif my-1 font-normal text-black/90 py-1 px-2 rounded-3xl  bg-white/20 backdrop-blur-md border border-white/30 shadow-lg w-fit">
-            {article.artista}
+            {nome_artista}
           </h2>
         </div>
         <div className="details-view">
           <p className="text-white/60 text-sm md:text-base my-2 leading-relaxed ">
-            {article.bloco_texto[0]}
+            {bloco_texto}
           </p>
 
           {isDetails && (
             <div className="flex gap-2 w-fit h-fit">
               <Link
                 className=" text-white uppercase text-sm transition-colors py-1 px-2 rounded-3xl  bg-white/20 backdrop-blur-md border border-white/30 shadow-lg w-fit"
-                to={`/obra_artistica/${article.id}`}
+                to={`/obra_artistica/${id_obra}`}
               >
-                ver obra
+                Ver obra
               </Link>
               <button
                 onClick={(e) => {
