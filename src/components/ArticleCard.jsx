@@ -58,9 +58,10 @@ const ArticleCard = ({
           </p>
 
           {isDetails && (
-            <div className="flex gap-2 w-fit h-fit">
+            <div className="flex sm:flex-row flex-col gap-2 w-full h-20 items-center ">
               <Link
-                className=" text-white uppercase text-sm transition-colors py-1 px-2 rounded-3xl  bg-white/20 backdrop-blur-md border border-white/30 shadow-lg w-fit"
+                id="no_style"
+                className=" static text-white uppercase text-sm transition-colors py-1 px-2 rounded-[15px]  bg-white/20 backdrop-blur-md border border-white/30 shadow-lg w-fit h-fit"
                 to={`/obra_artistica/${id_obra}`}
               >
                 Ver obra
@@ -70,7 +71,7 @@ const ArticleCard = ({
                   e.stopPropagation();
                   onMoveToTop();
                 }}
-                className=" text-white uppercase text-sm transition-colors py-1 px-2 rounded-3xl  bg-white/20 backdrop-blur-md border border-white/30 shadow-lg w-fit"
+                className=" text-white uppercase text-sm transition-colors py-1 px-2 rounded-[15px]  bg-white/20 backdrop-blur-md border border-white/30 shadow-lg w-fit"
               >
                 Mover para o topo
               </button>

@@ -197,7 +197,7 @@
   left: 0;
 }
 
-.gallery-article a {
+.gallery-article a:not(#no_style) {
   position: absolute;
   inset: 0;
   z-index: 0;
