@@ -24,9 +24,7 @@ const Museus = () => {
           </p>
         </div>
       </section>
-      <main>
-        <Exemplo />
-      </main>
+      <main>{/*<Exemplo />*/}</main>
     </>
   );
 };
