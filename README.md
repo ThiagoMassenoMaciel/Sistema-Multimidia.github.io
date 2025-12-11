@@ -1,31 +1,3 @@
----
-marp: true
-theme: gaia
-paginate: true
-backgroundColor: #1a1a1a
-color: #f0f0f0
-style: |
-  section {
-    font-family: 'Inter', sans-serif;
-    background-image: linear-gradient(to bottom right, #1a1a1a, #2d3748);
-  }
-  h1 {
-    color: #40E0D0;
-  }
-  h2 {
-    color: #EE82EE;
-  }
-  code {
-    background: #000000;
-    color: #7ec699;
-    padding: 2px 5px;
-    border-radius: 4px;
-  }
-  a {
-    color: #40E0D0;
-  }
----
-
 # MuseOnline
 
 ![logo](./src/assets/nomeSITE.png)
